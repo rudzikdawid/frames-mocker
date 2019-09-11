@@ -101,7 +101,7 @@ function sendToConnectedClients(newFrame) {
 
 function connect() {
     if (!wsServer) {
-        wsServer = new WebSocket.Server({port: 8040});
+        wsServer = new WebSocket.Server({port: 8080});
 
         wsServer.on('connection', (ws, req) => {
             wsConnections[req.headers['sec-websocket-key']] = ws;
