@@ -110,7 +110,7 @@ function connect() {
 
             for (let [id, connected] of Object.entries(wsConnections)) {
                 if (lastFrame) {
-                    connected.send(JSON.stringify({data: lastFrame}));
+                    connected.send(JSON.stringify(lastFrame));
                 }
 
                 connected.on('message', (message) => {
